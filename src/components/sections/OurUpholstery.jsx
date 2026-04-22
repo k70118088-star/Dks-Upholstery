@@ -11,7 +11,12 @@ const OurUpholstery = () => {
   };
 
   return (
-    <div className="w-full bg-[#FAF9F5] py-16 sm:py-20 lg:py-30 px-4 sm:px-6">
+    <div className="w-full relative bg-[#FAF9F5] py-16 sm:py-20 lg:py-30 px-4 sm:px-6">
+      <div className="left-0 absolute top-0 "><Icons icon={"bgSvg"}/></div>
+      <div className="right-0 absolute top-300 "><Icons icon={"bgSvg2"}/></div>
+      <div className="left-0 absolute top-330 "><Icons icon={"bgSvg3"}/></div>
+      <div className="left-50 absolute top-98 hidden xl:block "><Icons icon={"iconSvgArrow"}/></div>
+      <div className="right-50 absolute top-185 hidden xl:block"><Icons icon={"iconSvgArrow2"}/></div>
       <div className="max-w-285 w-full mx-auto flex flex-col items-center justify-center">
         
         <h4 className="max-w-full lg:max-w-209.25 text-center text-3xl sm:text-4xl lg:text-5xl font-semibold leading-[120%] text-[#010101]">

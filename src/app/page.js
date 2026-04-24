@@ -9,6 +9,7 @@ import UpholsteryTips from "@/components/sections/UpholsteryTips";
 import YourTrusted from "@/components/sections/YourTrusted";
 
 
+
 export default function Home() {
   return (
 

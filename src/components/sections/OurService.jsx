@@ -11,7 +11,7 @@ const OurService = () => {
   return (
     <div className="mt-120 lg:mt-49 px-4 sm:px-6">
       
-      <h2 className="text-center text-[#AFAFAF] font-semibold text-base sm:text-lg lg:text-xl leading-[160%] italic">
+      <h2 className="text-center text-[#AFAFAF] font-semibold text-base sm:text-lg lg:text-xl leading-160 italic">
         Trusted Our Service
       </h2>
 
@@ -25,7 +25,7 @@ const OurService = () => {
                 alt='img' 
                 width={180} 
                 height={62}
-                className="w-[180px] h-auto"
+                className="w-45 h-auto"
               />
             ))}
           </div>
@@ -37,18 +37,18 @@ const OurService = () => {
         {stats.map((item, index) => (
           <div 
             key={index} 
-            className="border border-[#19AE1A33] w-full sm:w-[48%] lg:w-full max-w-91 rounded-2xl hover:shadow-[0px_4px_25px_0px_#0101011A] p-5 flex items-center gap-5"
+            className="border cursor-pointer border-[#19AE1A33] w-full sm:w-[48%] lg:w-full max-w-91 rounded-2xl hover:shadow-[0px_4px_25px_0px_#0101011A] p-5 flex items-center gap-5"
           >
             <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-15 lg:h-15 rounded-[52px] flex items-center justify-center bg-[#1877F2]">
               <Icons icon={item.icon}/>
             </div>
 
             <div>
-              <h2 className="font-semibold text-[#010101] text-xl sm:text-2xl lg:text-[28px] italic leading-[120%]">
+              <h2 className="font-semibold text-blacky text-xl sm:text-2xl lg:text-custom-2xl italic leading-120">
                 {item.title}
               </h2>
 
-              <p className="font-semibold text-[#4D4D4D] text-sm sm:text-base leading-[120%]">
+              <p className="font-semibold text-[#4D4D4D] text-sm sm:text-base leading-120">
                 {item.desc}
               </p>
             </div>

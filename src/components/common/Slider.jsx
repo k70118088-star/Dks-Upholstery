@@ -12,7 +12,7 @@ import { testimonials } from "@/utils/helper";
 
 const Slider = () => {
   return (
-    <div className="w-full">
+    <div className="w-full max-w-360 mx-auto">
       <Swiper
         modules={[Navigation, Pagination]}
         breakpoints={{
@@ -32,16 +32,16 @@ const Slider = () => {
         className="relative my-swiper"
       >
         {/* Left Button */}
-        <div className="custom-prev absolute left-0 sm:left-15 top-1/2 -translate-y-1/2 z-9 w-15 h-15 group hover:bg-[#19AE1A] bg-[#fafafa] rounded-full flex items-center justify-center cursor-pointer shadow-[1px_1px_6px_0px_#00000014]">
+        <div className="custom-prev absolute left-0 sm:left-15 top-1/2 border-[0.76px] border-green -translate-y-1/2 z-9 w-15 h-15 group hover:bg-green bg-whity rounded-full flex items-center justify-center cursor-pointer shadow-[1px_1px_6px_0px_#00000014]">
           <span className="text-white text-xl">
-            <Icons icon={"prev"} pathClass={"group-hover:fill-[#FAFAFA]"} />
+            <Icons icon={"prev"} pathClass={"group-hover:fill-whity"} />
           </span>
         </div>
 
         {/* Right Button */}
-        <div className="custom-next absolute right-0 sm:right-15 top-1/2 -translate-y-1/2 z-9 w-15 h-15 group hover:bg-[#19AE1A] bg-[#fafafa] rounded-full flex items-center justify-center cursor-pointer shadow-[1px_1px_6px_0px_#00000014]">
+        <div className="custom-next absolute right-0 sm:right-15 top-1/2 border-[0.76px] border-green -translate-y-1/2 z-9 w-15 h-15 group hover:bg-green bg-whity rounded-full flex items-center justify-center cursor-pointer shadow-[1px_1px_6px_0px_#00000014]">
           <span className="text-white text-xl">
-            <Icons icon={"next"} pathClass={"group-hover:fill-[#FAFAFA]"} />
+            <Icons icon={"next"} pathClass={"group-hover:fill-whity"} />
           </span>
         </div>
 
@@ -51,14 +51,14 @@ const Slider = () => {
               <div
                 className={`rounded-2xl p-10 border h-88.25 transition-all duration-300 ${
                   isActive
-                    ? "bg-[#20AE190F] border-[#010101] shadow-[1px_1px_6px_0px_#00000014]"
-                    : "bg-[#FAFAFA] border-[#01010129]"
+                    ? "bg-[#20AE190F] border-blacky shadow-[1px_1px_6px_0px_#00000014]"
+                    : "bg-whity border-[#01010129]"
                 }`}
               >
                 {/* Quote */}
                 <Icons icon={"quote"} />
                 <p
-                  className={`text-base mt-6 ${isActive ? "text-[#010101]" : "text-[#4D4D4D]"} leading-[160%]`}
+                  className={`text-base mt-6 ${isActive ? "text-blacky" : "text-[#4D4D4D]"} leading-[160%]`}
                 >
                   {item.text}
                 </p>
@@ -66,7 +66,7 @@ const Slider = () => {
                 {/* User */}
                 <div className="flex items-center justify-between mt-6">
                   <div>
-                    <h3 className="font-semibold text-2xl leading-[130%] text-[#010101]">
+                    <h3 className="font-semibold text-2xl leading-[130%] text-blacky">
                       {item.name}
                     </h3>
                     <p className="text-base leading-[160%] text-[#4D4D4D]">

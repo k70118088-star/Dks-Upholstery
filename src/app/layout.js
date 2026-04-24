@@ -16,7 +16,7 @@ export const metadata = {
   openGraph: {
     title: "DKS Upholstery",
     description: "Upholstery Services Trusted Across Singapore",
-    images: ["/assets/meta-img.png"],
+    images: ["/meta-img.png"],
   },
 };
 
@@ -24,7 +24,7 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
-      className={`${poppins.variable} bg-[#fafafa] h-full antialiased`}
+      className={`${poppins.variable} bg-whity h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
         <Navbar />

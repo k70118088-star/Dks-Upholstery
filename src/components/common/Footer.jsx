@@ -1,11 +1,17 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Icons from "./Icons";
 import { footernavlinks, footerservices, footergallery } from "@/utils/helper";
 
 const Footer = () => {
+     const [year, setYear] = useState("");
+
+  useEffect(() => {
+    setYear(new Date().getFullYear());
+  }, []);
+
   return (
     <div className="bg-[#F9F8F5] px-4 sm:px-0">
       <footer className=" max-w-337 mx-auto pt-10 sm:pt-12 lg:pt-14 pb-0">
@@ -21,7 +27,7 @@ const Footer = () => {
                 className="object-contain"
               />
 
-              <p className="mt-4 sm:mt-6 text-sm leading-[160%] pop text-[#4D4D4D] max-w-full lg:max-w-[452.1px]">
+              <p className="mt-4 sm:mt-6 text-sm leading-160 pop text-[#4D4D4D] max-w-full lg:max-w-[452.1px]">
                 At DKS, we specialize in expert upholstery, custom furniture,
                 and repairs combining craftsmanship with care to bring new life
                 to your furniture.
@@ -35,39 +41,43 @@ const Footer = () => {
                     <div>
                   <div className=" flex flex-row gap-2 items-start">
                     <Icons icon={"location"} />
-                    <p className="text-sm leading-[160%] pop text-[#010101]">
+                    <a  href="https://www.google.com/maps/place/37+Defu+Lane+10,+%2301-41,+Singapore+539214/@1.3518544,103.8883542,17z/data=!3m1!4b1!4m6!3m5!1s0x31da17b88117fced:0xab8ac08c9939cc05!8m2!3d1.3518544!4d103.8909291!16s%2Fg%2F11wy7dy_jl?entry=ttu&g_ep=EgoyMDI2MDQyMC4wIKXMDSoASAFQAw%3D%3D">
+                    <p className="text-sm leading-160  text-blacky">
                       Defu Industrial Estate
                       <br />
                       Address: 37 Defu Lane 10,
                       <br />
                       #01/41, Singapore 539214
                     </p>
+                    </a>
                     </div>
+                    <div className="block sm:hidden">
                     <div className="flex sm:hidden flex-row items-center gap-2">
                     <Icons icon={"mail"} />
-                    <span className="text-sm pop text-[#010101] break-all">
+                    <span className="text-sm pop text-blacky break-all">
                       info@dksinternational.com
                     </span>
-                  </div>
-                  <span className="text-sm pop text-[#010101] ml-6 break-all">
+                    </div>
+                  <span className="text-sm pop text-blacky ml-6 break-all">
                     dks.int@live.com
                   </span>
+                  </div>
                 
                   </div>
 
                   <div className="flex flex-row items-center gap-4 mt-5 sm:mt-7">
                     <div className="lg:flex hidden flex-row items-center gap-2">
                       <Icons icon={"follow"} />
-                      <span className="text-sm font-semibold pop text-[#010101]">
+                      <span className="text-sm font-semibold pop text-blacky">
                         Follow Us
                       </span>
                     </div>
 
                     <div className="lg:flex hidden flex-row items-center gap-3">
-                      <Link href="#" aria-label="Instagram">
+                      <Link href="https://www.instagram.com/dksinternationalsg/" aria-label="Instagram">
                         <Icons icon={"insta"} />
                       </Link>
-                      <Link href="#" aria-label="Facebook">
+                      <Link href="https://www.facebook.com/dksinternationalsg/photos/" aria-label="Facebook">
                         <Icons icon={"facebook"} />
                       </Link>
                       <Link href="#" aria-label="LinkedIn">
@@ -81,21 +91,21 @@ const Footer = () => {
                 <div className="flex flex-col flex-wrap gap-3">
                   <div className="flex flex-row items-center gap-2">
                     <Icons icon={"whatsappsm"} />
-                    <span className="text-sm pop text-[#010101]">
+                    <span className="text-sm pop text-blacky">
                       98385685, 93832006
                     </span>
                   </div>
                   <div className="flex flex-row items-center gap-2">
                     <Icons icon={"blackPhone"} />
-                    <span className="text-sm pop text-[#010101]">62844186</span>
+                    <span className="text-sm pop text-blacky">62844186</span>
                   </div>
                   <div className="hidden sm:flex flex-row items-center gap-2">
                     <Icons icon={"mail"} />
-                    <span className="text-sm pop text-[#010101] break-all">
+                    <span className="text-sm pop text-blacky break-all">
                       info@dksinternational.com
                     </span>
                   </div>
-                  <span className="text-sm pop text-[#010101] ml-6 break-all">
+                  <span className="text-sm hidden sm:flex text-blacky ml-6 break-all">
                     dks.int@live.com
                   </span>
                 </div>
@@ -110,7 +120,7 @@ const Footer = () => {
                   <React.Fragment key={index}>
                     <Link
                       href={link.href}
-                      className="text-sm pop text-[#010101] hover:text-[#19AE1A] transition-colors whitespace-nowrap mr-3"
+                      className="text-sm pop text-blacky hover:text-green transition-colors whitespace-nowrap mr-3"
                     >
                       {link.label}
                     </Link>
@@ -128,7 +138,7 @@ const Footer = () => {
                 {footergallery.map((item, index) => (
                   <div
                     key={index}
-                    className="w-[70px] sm:w-[81.1px] h-[60px] sm:h-[70px] rounded-xl overflow-hidden shrink-0"
+                    className="w-17.5 sm:w-[81.1px] h-15 sm:h-17.5 rounded-xl overflow-hidden shrink-0"
                   >
                     <Image
                       src={item.image}
@@ -149,7 +159,7 @@ const Footer = () => {
                   <React.Fragment key={index}>
                     <Link
                       href={service.href}
-                      className="text-sm pop text-[#010101] hover:text-[#19AE1A] transition-colors whitespace-nowrap px-2 sm:px-3 first:pl-0"
+                      className="text-sm pop text-blacky hover:text-green transition-colors whitespace-nowrap px-2 sm:px-2 first:pl-0"
                     >
                       {service.label}
                     </Link>
@@ -166,7 +176,7 @@ const Footer = () => {
           <div className="w-full lg:hidden flex justify-between pt-5 border-t border-t-[#0101011F] mt-7.5 items-center ">
           <div className="flex flex-row items-center gap-2">
                       <Icons icon={"follow"} />
-                      <span className="text-sm font-semibold pop text-[#010101]">
+                      <span className="text-sm font-semibold pop text-blacky">
                         Follow Us
                       </span>
                     </div>
@@ -187,7 +197,7 @@ const Footer = () => {
       </footer>
        <div className="mt-5 max-w-337 w-full mx-auto sm:mt-10 border-top-gradient py-4 sm:py-5 text-center">
             <p className="text-xs sm:text-sm pop text-[#4D4D4D]">
-              Copyright Â© 2025 DKS Upholstery Pte Ltd | DKS International
+              Copyright Â© {year} DKS Upholstery Pte Ltd | DKS International
               Supplier & Services. All Rights Reserved.
             </p>
           </div>

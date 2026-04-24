@@ -17,7 +17,7 @@ export const formFields = [
   {
     icon: "phone",
     label: "Contact*",
-    type: "text",
+    type: "tel",
     placeholder: "Enter Mobile",
   },
   {
@@ -267,6 +267,33 @@ export const faqs = [
     question: "Q10. Do you provide a warranty?",
     answer:
       "Yes, every job comes with a 12-month workmanship warranty as standard. Please contact us within the warranty period if you notice any issues with the work.",
+  },
+];
+
+export const slide = [
+  {
+    img: "/assets/images/webp/sofa.webp",
+    title: "OUTSTANDING SERVICE!",
+    desc: "My sofa looks brand new! The team was professional, quick, and the finish exceeded my expectations.",
+    name: "Arjun S.",
+  },
+  {
+    img: "/assets/images/webp/sofa.webp",
+    title: "AMAZING QUALITY!",
+    desc: "Highly recommend their upholstery service. Great attention to detail.",
+    name: "Rohit K.",
+  },
+  {
+    img: "/assets/images/webp/sofa.webp",
+    title: "AMAZING QUALITY!",
+    desc: "Highly recommend their upholstery service. Great attention to detail.",
+    name: "Rohit K.",
+  },
+  {
+    img: "/assets/images/webp/sofa.webp",
+    title: "AMAZING QUALITY!",
+    desc: "Highly recommend their upholstery service. Great attention to detail.",
+    name: "Rohit K.",
   },
 ];
 

@@ -8,18 +8,21 @@ import "swiper/css/navigation";
 import Icons from "./Icons";
 import { slides } from "@/utils/helper";
 
-
-
 const BeforeAfterSlider = () => {
   return (
     <div className="w-full  mx-auto relative">
-
       {/* Custom Buttons */}
       <div className="prev absolute hidden left-0 min-[1300px]:-left-10 top-1/2 group -translate-y-1/2 z-10  sm:flex items-center justify-center cursor-pointer">
-        <Icons icon={"prev"} pathClass={"fill-[#010101] group-hover:fill-[#19AE1A]"}/>
+        <Icons
+          icon={"prev"}
+          pathClass={"fill-blacky group-hover:fill-green"}
+        />
       </div>
       <div className="next absolute hidden right-0 min-[1300px]:-right-10 top-1/2 group -translate-y-1/2 z-10 sm:flex items-center justify-center cursor-pointer">
-        <Icons icon={"next"} pathClass={"fill-[#010101] group-hover:fill-[#19AE1A]"}/>
+        <Icons
+          icon={"next"}
+          pathClass={"fill-blacky group-hover:fill-green"}
+        />
       </div>
       <Swiper
         modules={[Navigation]}
@@ -29,11 +32,18 @@ const BeforeAfterSlider = () => {
         }}
         loop={true}
         spaceBetween={24}
+        breakpoints={{
+          0: {
+            spaceBetween: 0,
+          },
+          640: {
+            spaceBetween: 24,
+          },
+        }}
       >
         {slides.map((item, index) => (
           <SwiperSlide key={index}>
-            <div className="flex gap-6">
-
+            <div className="flex sm:gap-6 gap-0">
               {/* BEFORE */}
               <div className="relative w-full">
                 <Image
@@ -41,9 +51,8 @@ const BeforeAfterSlider = () => {
                   alt="before"
                   width={558}
                   height={339}
-                  className="rounded-xl w-full object-cover"
+                  className="sm:rounded-xl rounded-l-xl w-full object-cover"
                 />
-               
               </div>
 
               {/* AFTER */}
@@ -53,10 +62,9 @@ const BeforeAfterSlider = () => {
                   alt="after"
                   width={558}
                   height={339}
-                  className="rounded-xl w-full  object-cover"
+                  className="sm:rounded-xl rounded-r-xl w-full  object-cover"
                 />
               </div>
-
             </div>
           </SwiperSlide>
         ))}
